@@ -1,0 +1,2043 @@
+<html lang="en" xmlns:wb="http://open.weibo.com/wb" class="huodongxing">
+<head>
+    <title>活动行 - 北京综合排序的聚会交友活动</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=960, initial-scale=1.0" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="活动行" />
+    <meta name="publisher" content="活动行" />
+    <meta name="rating" content="general" />
+    <meta name="copyright" content="&copy; 2012 京ICP备12026130号" />
+    <meta name="webcrawlers" content="all" />
+    <meta name="company" content="北京艾科创意信息技术有限公司" />
+    <meta name="subject" content="找活动，办活动，上活动行" />
+    <meta name="abstract" content="领先的活动报名及电子票务平台" />
+    <meta name="sina-page-nonceid" content="2535KbV86db3d955Ef56KVU95485n88g88gxfF059J589iy8e7585d6v" />
+    <meta name="description" content="找好活动、办好活动，用活动行！活动行提供创业、互联网、科技、金融、教育、亲子、生活、聚会交友等50多种活动，是深受主办方信赖和城市白领喜爱的活动平台" />
+    <meta name="keywords" content="活动行 - 北京综合排序的聚会交友活动,创新创业,艺术表演,论坛讲座,研讨会,社团活动,公益活动,展会沙龙,同城社交,活动网站,举办活动找活动,活动搜索,报名系统,线上售票,电子票务,手机签到,二维码验票,活动名单" />
+
+    <link href="https://cdn.huodongxing.com/Content/v2.0/plugin/flatpickr/v2.4.8/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+
+    <meta property="wb:webmaster" content="fe921e4cbec076df" />
+    <meta property="qc:admins" content="1121775403476701676375" />
+
+    <link rel="SHORTCUT ICON" href="https://cdn.huodongxing.com/Content/img/favicon.ico"/>
+    <link href="https://cdn.huodongxing.com/Content/v3.0/dist/css/hdx-main-feature.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.huodongxing.com/Content/v2.0/plugin/jquery/v2.2.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.huodongxing.com/Content/v3.0/dist/lib/layui/layui.js" type="text/javascript"></script>
+
+    <script src="https://cdn.huodongxing.com/Content/v3.0/dist/js/hdx-main-feature.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        function google_analytics_script(){
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-34953182-1', 'huodongxing.com');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+
+            ga(function(tracker) { $("#google_analytics_client_id").val(tracker.get('clientId')); });
+        }
+
+        var uvOptions = {};
+        var _atrk_opts = { atrk_acct: "GgKTe1aoiI00WL", domain: "huodongxing.com", dynamic: true };
+
+        function validateEmail(email) {
+            if (email == null || $.trim(email) == "") return false;
+            var pattern = /^([A-Za-z0-9]+)(([A-Za-z0-9]+)|(_+)|(\-+)|(\.+)|(\++))*@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$/i;
+            return pattern.test($.trim(email));
+        }
+        function validatePhone(phone) {
+            if (phone == null || $.trim(phone) == "") return false;
+            var pattern = /(^((0[1,2]{1}\d{1}-?\d{8})|(0[3-9]{1}\d{2}-?\d{7,8}))$)|(^(0|86|17951)?(13[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[89]|14[57])[0-9]{8}$)/;
+            return pattern.test($.trim(phone));
+        }
+
+        function setCookie(name, value, minutes) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() + minutes * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+
+        function getCookie(c_name) {
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1
+                    c_end = document.cookie.indexOf(";", c_start)
+                    if (c_end == -1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start, c_end))
+                }
+            }
+            return "";
+        }
+
+        Date.prototype.format = function (format) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //month
+                "d+": this.getDate(),    //day
+                "h+": this.getHours(),   //hour
+                "m+": this.getMinutes(), //minute
+                "s+": this.getSeconds(), //second
+                "q+": Math.floor((this.getMonth() + 3) / 3),  //quarter
+                "S": this.getMilliseconds() //millisecond
+            }
+            if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o) if (new RegExp("(" + k + ")").test(format))
+                format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+            return format;
+        }
+        var _hmt = _hmt || [];
+    </script>
+    <style>
+        body{
+            margin:0;
+            position: relative;
+        }
+        .right-position-advice-wrap {
+            position: absolute;
+            z-index: 1000;
+            right: 30px;
+            bottom: 30px;
+        }
+        .right-position-advice-wrap .icon-new{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .right-position-advice-wrap .icon-advice-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/kefu.png);
+        }
+        .right-position-advice-wrap .icon-feedback-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/fkui.png);
+        }
+        .right-position-advice-wrap .icon-top-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/zhiding.png);
+        }
+        .right-position-advice-wrap>div {
+            position: relative;
+            cursor: pointer;
+        }
+        .right-position-advice-wrap >.feedback-div {
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+        .right-position-advice-wrap .advice-div:hover .advice-div-hover {
+            opacity: 1;
+            display: block;
+        }
+        .right-position-advice-wrap .feedback-div:hover .feedback-div-hover {
+            opacity: 1;
+            display: flex;
+        }
+        .right-position-advice-wrap .top-div:hover .top-div-hover {
+            opacity: 1;
+            display: flex;
+        }
+        .right-position-advice-wrap .advice-div:hover .icon-advice-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/kefu-sel.png);
+        }
+        .right-position-advice-wrap .feedback-div:hover .icon-feedback-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/fkui-sel.png);
+        }
+        .right-position-advice-wrap .top-div:hover .icon-top-new {
+            background: url(https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/zhiding-sel.png);
+        }
+        .right-position-advice-wrap .advice-div-hover {
+            display: none;
+            position: absolute;
+            left: -188px;
+            top: -72px;
+            opacity: 0;
+            transition: all .15s linear;
+        }
+        .right-position-advice-wrap .feedback-div-hover {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            font-size: 14px;
+            color: #4aca53;
+            width: 130px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            border:1px solid #eee;
+            left: -130px;
+            top: 0px;
+            background: #fff;
+            transition: all .15s linear;
+        }
+        .right-position-advice-wrap .top-div-hover {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            font-size: 14px;
+            color: #4aca53;
+            width: 130px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            border:1px solid #eee;
+            left: -130px;
+            top: 0px;
+            background: #fff;
+            transition: all .15s linear;
+        }
+        .right-position-advice-wrap .advice-div-show,.right-position-advice-wrap .feedback-div-show,.right-position-advice-wrap .top-div-show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border:1px solid #eee;
+            background: #fff;
+        }
+        .right-position-advice-wrap .feedback-div-show {
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .feedback-layer .modal-content {
+            padding: 4px;
+            border: 1px solid #999;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 4px;
+            outline: 0;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        }
+        .feedback-layer .modal-header {
+            background-color: #f2f1f1;
+            min-height: 16.43px;
+            padding: 15px;
+        }
+        .feedback-layer .modal-header .close {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            float: right;
+            opacity: .2;
+            color: #000;
+            background: #fff;
+            text-shadow: 0 1px 0 #fff;
+            font-size: 28px;
+            font-weight: 400;
+            margin-top: -6px;
+            padding: 0;
+            cursor: pointer;
+            border: 0;
+            background: 0 0;
+        }
+        .feedback-layer .modal-title {
+            line-height: 1.42857143;
+            margin: 0;
+            font-family: Microsoft Yahei;
+            font-size: 16px;
+            font-weight: 500;
+            color: #222;
+        }
+        .feedback-layer .modal-body {
+            position: relative;
+            width: 431px;
+            height: 313px;
+            margin: 30px auto 26px;
+            padding: 20px 30px 0;
+            background-image: url("https://cdn.huodongxing.com/Content/v2.0/img/paper_bg.png");
+            background-repeat: no-repeat;
+        }
+        .feedback-layer .feedback-face {
+            position: absolute;
+            display: inline-block;
+            top: -26px;
+            left: -13px;
+            width: 47px;
+            height: 52px;
+            background-image: url("https://cdn.huodongxing.com/Content/v2.0/img/backgrounds.32.png");
+            background-position: -56px 0;
+        }
+        .feedback-layer .modal-body .form-control {
+            font-size: 14px;
+            line-height: 1.42857143;
+            height: 20px;
+            padding: 5px 10px;
+            -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            color: #707070;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            background-color: #fff;
+            width: 330px;
+            height: 28px;
+            height: 22px\9;
+            padding-top: 11px\9;
+            padding-right: 14px;
+            padding-left: 14px;
+            color: #959595;
+            border-color: #dac49f;
+            background-color: transparent;
+            box-sizing: initial;
+        }
+        .feedback-layer .modal-body textarea {
+            font-size: 14px;
+            line-height: 40px;
+            width: 344px;
+            height: 156px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 0 0 0 14px;
+            resize: none;
+            color: #959595;
+            border: none;
+            outline: 0;
+            background-color: transparent;
+            background-image: url("https://cdn.huodongxing.com/Content/v2.0/img/paper_line.png");
+            background-repeat: no-repeat;
+            background-position: 0 35px;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .feedback-layer .text-right .btn-link {
+            font-size: 14px;
+            color: #959595;
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .feedback-layer .text-right .btn {
+            margin-left: 15px;
+            text-indent: .4em;
+            letter-spacing: .4em;
+        }
+        .feedback-layer .text-right .btn-primary {
+            font-weight: 700;
+            width: 110px;
+            text-shadow: 1px 1px #92bd25;
+            padding: 8px 0;
+        }
+        .feedback-layer .text-right .btn {
+            margin-left: 15px;
+            text-indent: .4em;
+            letter-spacing: .4em;
+        }
+        .btn-lg {
+            font-size: 16px;
+            line-height: 1.33;
+            padding: 10px 16px;
+            border-radius: 2px;
+        }
+        .btn-primary {
+            color: #fff;
+            border-color: #62b651;
+            background-color: #62b651;
+        }
+        .btn {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            display: inline-block;
+            margin-bottom: 0;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            touch-action: manipulation;
+            -o-user-select: none;
+        }
+        .icon-copnew{
+            position: absolute;
+            display: inline-block;
+            top: 3px;
+            right: 6px;
+            width: 22px;
+            height: 15px;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAYAAAC+NTVfAAADEElEQVRIib2VbUwbdRzHP9frXQstKLtM5EEH1AljZXED4ov5wAsTXZb4poTNIGbZQ9yWbK82SfSNMdFlkyyZr8ToNMbEmHhoAlH3lKhQCbuBDUTLKrDJxsY2CNnGCu1d73zRFllbjAujn+T/4r6///0+//vdJSeQwnS9zw3sAHzAemB16p4H4BYwCHwPfKZo6tziopAibgbagMeXIVyK68ABRVPVZGBbJH4b+GqFxABFwLfT9b7WZCAkxM0JcbZoVDRVFRLveAQozKJ8AlgrtpZU7wUak6lYkEfuls0IWMSmbiPIdlyvvog1ew8EcL6wCclTurDEVY9AOIzz+U0ImJgzs8jrK5BrPBiXroFoQ64uB8vECkeSmnzgithaUn0UKEumkqeU3LZ3kGtrmO84jeBy4v7kA8zBIIJgw/XRu0i1NdjrNmB/diPSmmLmT/eQd/IoYo6DyK/95L93EOkNH9HvTiGVFeP+/BjWUDB+mH8R7YA342CeKMK1/RXCXT+nleY+bGfuTN99mTU4jOitil9UVsCdu0heD2JxIeg6kd6h1DbP2AElk9voOoe0swlbz4W0mnPPaziatsb39QWY/bQDvXcAeX8LjhoPALEeDWndU9ieLMYMBDHnIqltHrOlJkmiZ/1Yf0/g3r0trWb+GcLo1jC6NWIXxwCI9A6AIOD0vQx//IUxPIZYWYHNW4XR93smxbR9KTmWRfjEF7jb308/mL8/bex66CrWjSnEl55D/1JFD47i2NcMOTlE/AOZDCNLPjlANBAiduqXtDzn8JsUdH4cX98cX8hj5wMgy+hDIfThyyDLWJO30EcnMrXvEqbrfdbiRCzIw9lQR8QfwLg5g/ioC6mqHD00DpaFs6Huvg6WYRDu7AZA8pQgb3ia8I9+rPko7te3Yk7NEP7pt1TxPcCTJs8SrYqmHvvPsa8QXxP/eZFNeSwhbVE01QRY+mt/eMwAXcARRVODiwuZ5CPAW4mblkMUmATGFU01Mm1IlbcDhxRNnV2m+H+RlE8CuxRN/SEb0iQ2QAW82RYD/AM7NQ3JoJ7wAQAAAABJRU5ErkJggg==");
+            background-size: cover;
+        }
+        .class-name__link{
+            display: inline-block;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        #pop_msg_head{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+        }
+        #pop_message_icon{
+            margin-right: 0px;
+        }
+        #pop_message_dlg button.close{
+            display: none;
+        }
+        #pop_message_dlg {
+            background: rgba(0,0,0,0.4);
+            margin-top: 0px!important;
+            border: none;
+            box-shadow: none;
+        }
+        #pop_message_dlg .modal-dialog{
+            top: 48%;
+            left: 50%;
+            width: 200px!important;
+            position: absolute;
+            padding-top: 0px;
+            transform: translateX(-50%) translateY(-50%);
+            opacity: 0.8;
+        }
+        #pop_message_dlg .modal-content{
+            box-shadow: none;
+            background: #000;
+            border-radius: 0px;
+        }
+        #pop_message_dlg .modal-header{
+            padding: 15px;
+            padding-top: 26px;
+            padding-bottom: 22px;
+            border-bottom: none;
+        }
+        #pop_message_content{
+            color: #fff;
+            margin-top: 14px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .icon-success {
+            width:24px;
+            height:24px;
+            background-image:url("https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/toast_ok_s--white.png");
+            background-position: 50%;
+            background-size: cover;
+        }
+        .icon-danger {
+            width:24px;
+            height:24px;
+            background-image:url("https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/toast_no_s.png");
+            background-position: 50%;
+            background-size: cover;
+        }
+        .icon-warning {
+            width:24px;
+            height:24px;
+            background-image:url("https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/toast_i.png");
+            background-position: 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<section class="hdx-feature-wrap">
+    <header class="hdx-feature-head">
+        <div class="header-content flex">
+            <div class="header-content-left">
+                <div class="header-content-left-show"><span class="point-icon icon"></span><span class="header-content-left-show-info">网站导航</span>
+                    <div class="header-content-left-hide flex">
+                        <div class="header-content-left-hide-item">
+                            <h4 class="header-item-title"><span class="icon-hot icon"></span>热门站点</h4>
+                            <ul class="flex header-item-list">
+                                <li><a href="https://www.huodongxing.com?s=true">全国站</a></li>
+                                <li><a href="https://bj.huodongxing.com">北京站</a></li>
+                                <li><a href="https://sh.huodongxing.com">上海站</a></li>
+                                <li><a href="https://gz.huodongxing.com">广州站</a></li>
+                                <li><a href="https://sz.huodongxing.com">深圳站</a></li>
+                                <li><a href="https://hz.huodongxing.com">杭州站</a></li>
+                                <li><a href="https://wh.huodongxing.com">武汉站</a></li>
+                                <li><a href="https://cd.huodongxing.com">成都站</a></li>
+                                <li><a href="https://cs.huodongxing.com">长沙站</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-content-left-hide-itema">
+                            <h4 class="header-item-title"><span class="icon-good-select icon"></span>精选推荐</h4>
+                            <ul class="flex header-item-list">
+                                <li><a href="https://bj.huodongxing.com">首页</a></li>
+                                <li><a href="https://www.huodongxing.com/channel?c=行业">行业</a></li>
+                                <li><a href="https://www.huodongxing.com/channel?c=生活">生活</a></li>
+                                <li><a href="https://www.huodongxing.com/channel?c=亲子">亲子</a></li>
+                                <li><a href="https://www.huodongxing.com/channel?c=学习">学习</a></li>
+                            </ul>
+                            <ul class="flex header-item-list">
+                                <li><a href="https://bj.huodongxing.com/events">找活动</a></li>
+                                <li><a href="https://bj.huodongxing.com/zhubanfang">找主办方</a></li>
+                                <li><a href="https://bj.huodongxing.com/topic">专题精选</a></li>
+                                <li><a href="https://bj.huodongxing.com/ranklist">人气榜</a></li>
+                                <li><a href="https://bj.huodongxing.com/app">下载App</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-content-left-hide-itemb">
+                            <h4 class="header-item-title"><span class="icon-good-more icon"></span>更多服务</h4>
+                            <ul class="flex header-item-list">
+                                <li><a href="http://venue.huodongxing.com/venue">找场地</a></li>
+                                <li><a href="http://bbx.huodongxing.com/bbx/list?sort=z">活动百宝箱</a></li>
+                                <li><a href="https://www.huodongxing.com/console/home">主办方管理中心</a></li>
+                                <li><a href="https://www.huodongxing.com/vip">主办方vip</a></li>
+                                <li><a href="https://bj.huodongxing.com/guanjia">活动行管家</a></li>
+                                <li><a href="https://bj.huodongxing.com/conference">大会解决方案</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="header-nav flex">
+                <li class="flex">
+                    <a class="register" href="https://www.huodongxing.com/register?returnUrl=%2fevents%3forderby%3do%26status%3d1%26tag%3d%25E8%2581%259A%25E4%25BC%259A%25E4%25BA%25A4%25E5%258F%258B%26city%3d%25E5%258C%2597%25E4%25BA%25AC">注册</a>
+                    <span class="split-line">/</span>
+                    <a class="login" href="https://www.huodongxing.com/login?ReturnUrl=%2fevents%3forderby%3do%26status%3d1%26tag%3d%25E8%2581%259A%25E4%25BC%259A%25E4%25BA%25A4%25E5%258F%258B%26city%3d%25E5%258C%2597%25E4%25BA%25AC">登录</a>
+                    <span class="right-line">|</span>
+                </li>
+                <li class="flex"><a href="https://www.huodongxing.com/console/home" target="_blank">主办方管理中心</a><span class="right-line">|</span></li>
+                <li class="flex"><a href="http://bbx.huodongxing.com/bbx/list?sort=z" target="_blank">活动行百宝箱</a><span class="right-line">|</span></li>
+                <li class="flex"><a href="https://www.huodongxing.com/about?utm_source=footer&utm_medium=&utm_campaign=footpage#js6" target="_blank">推广合作</a><span class="right-line">|</span></li>
+                <li class="flex"><a href="https://bj.huodongxing.com/mice" target="_blank">大会解决方案</a><span class="right-line">|</span></li>
+
+                <li class="flex">
+                    <a class="mobile-code-a flex"><span class="icon mobile-code-icon"></span>手机版<div class="hover-pic-mobile"></div></a>
+                    <span class="right-line">|</span>
+                </li>
+                <li class="flex"><a class="focus-hdx-a flex"><span class="icon focus-hdx-icon"></span>关注活动行<div class="hover-pic-focus"></div></a><span class="right-line">|</span></li>
+                <li class="flex"><a class="wechat-hdx-a flex"><span class="icon wechat-hdx-icon"></span>小程序
+                        <div class="hover-pic-wechat"></div></a><span class="right-line">|</span>
+                </li>
+                <li class="flex"><a href="https://shimo.im/doc/U0h75Y2pVws2tUeU?r=PJN7KD" target="_blank">帮助中心</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="hdx-feature-head-bottom-new">
+        <div class="auto-width">
+            <div class="feature-head-bottom-left flex">
+                <a href="https://bj.huodongxing.com"><img class="head-logo" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/logo.png"></a>
+                <span class="border-line" style="display:"></span>
+                <div class="city-select" style="display:">
+                    <p class="city-info flex">北京<span class="icon icon-down"></span></p>
+                    <div class="select-down-div">
+                        <div class="select-down-div-item flex city-present-item">
+                            <span class="city-type">当前定位城市:</span>
+                            <div class="city-present"><a></a></div>
+                        </div>
+                        <div class="select-down-div-item flex"><span class="city-type">热门城市:</span>
+                            <div class="city-list">
+                                <a href="https://www.huodongxing.com?s=true">全国</a>
+                                <a href="https://bj.huodongxing.com">北京</a>
+                                <a href="https://sh.huodongxing.com">上海</a>
+                                <a href="https://gz.huodongxing.com">广州</a>
+                                <a href="https://sz.huodongxing.com">深圳</a>
+                                <a href="https://hz.huodongxing.com">杭州</a>
+                                <a href="https://wh.huodongxing.com">武汉</a>
+                                <a href="https://cd.huodongxing.com">成都</a>
+                                <a href="https://cs.huodongxing.com">长沙</a>
+                                <a href="https://bj.huodongxing.com/events?city=南京" target="">南京</a>
+                                <a href="https://bj.huodongxing.com/events?city=重庆" target="">重庆</a>
+                                <a href="https://bj.huodongxing.com/events?city=苏州" target="">苏州</a>
+                            </div>
+                        </div>
+                        <div class="select-down-div-item flex"><span class="city-type">其它城市:</span>
+                            <div class="city-list">
+                                <a href="https://bj.huodongxing.com/events?city=西安" target="">西安</a>
+                                <a href="https://bj.huodongxing.com/events?city=郑州" target="">郑州</a>
+                                <a href="https://bj.huodongxing.com/events?city=厦门" target="">厦门</a>
+                                <a href="https://bj.huodongxing.com/events?city=天津" target="">天津</a>
+                                <a href="https://bj.huodongxing.com/events?city=宁波" target="">宁波</a>
+                                <a href="https://bj.huodongxing.com/events?city=青岛" target="">青岛</a>
+                                <a href="https://bj.huodongxing.com/events?city=东莞" target="">东莞</a>
+                                <a href="https://bj.huodongxing.com/events?city=佛山" target="">佛山</a>
+                                <a href="https://bj.huodongxing.com/events?city=济南" target="">济南</a>
+                                <a href="https://bj.huodongxing.com/events?city=珠海" target="">珠海</a>
+                                <a href="https://bj.huodongxing.com/events?city=合肥" target="">合肥</a>
+                                <a href="https://bj.huodongxing.com/events?city=福州" target="">福州</a>
+                                <a href="https://bj.huodongxing.com/events?city=石家庄" target="">石家庄</a>
+                                <a href="https://bj.huodongxing.com/events?city=昆明" target="">昆明</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-head-bottom-right flex">
+                <div class="search-div-wrap">
+                    <div class="search-div flex">
+                        <input class="js-search-input" type="text" placeholder="搜索活动或主办方名称" value="" /><a class="search-link"><span class="icon search-top-icon"></span>搜索</a>
+                    </div>
+                    <div class="history-list">
+                        <a href="https://bj.huodongxing.com/search?ps=12&amp;pi=0&amp;list=list&amp;st=1,4&amp;qs=人工智能" target="_blank">人工智能 </a>
+                        <a href="https://bj.huodongxing.com/search?ps=12&amp;pi=0&amp;list=list&amp;st=1,4&amp;qs=短视频" target="_blank">短视频 </a>
+                        <a href="https://bj.huodongxing.com/search?ps=12&amp;pi=0&amp;list=list&amp;st=1,4&amp;qs=区块链" target="_blank">区块链 </a>
+                        <a href="https://bj.huodongxing.com/search?ps=12&amp;pi=0&amp;list=list&amp;st=1,4&amp;qs=演讲" target="_blank">演讲 </a>
+                        <a href="https://bj.huodongxing.com/search?ps=12&amp;pi=0&amp;list=list&amp;st=1,4&amp;qs=职场技能" target="_blank">职场技能 </a>
+                    </div>
+                </div>
+                <a class="punlish-activity" style="width: 110px;" href="https://www.huodongxing.com/create" target="_blank"><span class="icon icon-publish"></span>免费发活动</a>
+                <a class="look-site" href="http://venue.huodongxing.com/venue" target="_blank"><span class="icon icon-look-site"></span>找场地</a>
+                <a class="gao-ding" href="https://www.gaoding.com/utms/e9832144f52cc1e51cce4f724efe7058" target="_blank">
+                    <span class="icon "></span>免费素材
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="hdx-feature-nav-wrap">
+
+    </section>
+    <section class="posi-fixed-top-wrap">
+        <div class="auto-width">
+            <div class="feature-head-bottom-left flex"><a href="/" target="_blank"><img class="head-logo" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/logo-fixed.png"></a><span class="border-line"></span>
+                <div class="city-select">
+                    <p class="city-info flex">北京<span class="icon icon-down"></span></p>
+                    <div class="select-down-div">
+                        <div class="select-down-div-item flex city-present-item">
+                            <span class="city-type">当前定位城市:</span>
+                            <div class="city-present"><a></a></div>
+                        </div>
+                        <div class="select-down-div-item flex"><span class="city-type">热门城市:</span>
+                            <div class="city-list">
+                                <a href="https://www.huodongxing.com?s=true">全国</a>
+                                <a href="https://bj.huodongxing.com">北京</a>
+                                <a href="https://sh.huodongxing.com">上海</a>
+                                <a href="https://gz.huodongxing.com">广州</a>
+                                <a href="https://sz.huodongxing.com">深圳</a>
+                                <a href="https://hz.huodongxing.com">杭州</a>
+                                <a href="https://wh.huodongxing.com">武汉</a>
+                                <a href="https://cd.huodongxing.com">成都</a>
+                                <a href="https://cs.huodongxing.com">长沙</a>
+                                <a href="https://bj.huodongxing.com/events?city=南京" target="">南京</a>
+                                <a href="https://bj.huodongxing.com/events?city=重庆" target="">重庆</a>
+                                <a href="https://bj.huodongxing.com/events?city=苏州" target="">苏州</a>
+                            </div>
+                        </div>
+                        <div class="select-down-div-item flex"><span class="city-type">其它城市:</span>
+                            <div class="city-list">
+                                <a href="https://bj.huodongxing.com/events?city=西安" target="">西安</a>
+                                <a href="https://bj.huodongxing.com/events?city=郑州" target="">郑州</a>
+                                <a href="https://bj.huodongxing.com/events?city=厦门" target="">厦门</a>
+                                <a href="https://bj.huodongxing.com/events?city=天津" target="">天津</a>
+                                <a href="https://bj.huodongxing.com/events?city=宁波" target="">宁波</a>
+                                <a href="https://bj.huodongxing.com/events?city=青岛" target="">青岛</a>
+                                <a href="https://bj.huodongxing.com/events?city=东莞" target="">东莞</a>
+                                <a href="https://bj.huodongxing.com/events?city=佛山" target="">佛山</a>
+                                <a href="https://bj.huodongxing.com/events?city=济南" target="">济南</a>
+                                <a href="https://bj.huodongxing.com/events?city=珠海" target="">珠海</a>
+                                <a href="https://bj.huodongxing.com/events?city=合肥" target="">合肥</a>
+                                <a href="https://bj.huodongxing.com/events?city=福州" target="">福州</a>
+                                <a href="https://bj.huodongxing.com/events?city=石家庄" target="">石家庄</a>
+                                <a href="https://bj.huodongxing.com/events?city=昆明" target="">昆明</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-list flex">
+                    <li class="nav-item "><a class="nav-item-a" href="https://bj.huodongxing.com" target="_blank">首页</a><span class="botton-line"></span></li>
+                    <li class="nav-item "><a class="nav-item-a" href="https://www.huodongxing.com/channel?c=行业" target="_blank">行业</a><span class="botton-line"></span></li>
+                    <li class="nav-item "><a class="nav-item-a" href="https://www.huodongxing.com/channel?c=生活" target="_blank">生活</a><span class="botton-line"></span></li>
+                    <li class="nav-item "><a class="nav-item-a" href="https://www.huodongxing.com/channel?c=亲子" target="_blank">亲子</a><span class="botton-line"></span></li>
+                    <li class="nav-item "><a class="nav-item-a" href="https://www.huodongxing.com/channel?c=学习" target="_blank">学习</a><span class="botton-line"></span></li>
+                </ul>
+            </div>
+            <div class="feature-head-bottom-right flex">
+                <div class="search-div flex">
+                    <input class="js-search-input" type="text" placeholder="搜索活动或主办方名称"><a class="search-link">搜索</a>
+                </div><a class="punlish-activity" style="width: 110px;" href="https://www.huodongxing.com/create"><span class="icon-publish"></span>免费发活动</a>
+
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $('.hdx-feature-head-bottom-new .search-link').on('click', function () {
+            search('.hdx-feature-head-bottom-new');
+        });
+
+        $('.posi-fixed-top-wrap .search-link').on('click', function () {
+            search('.posi-fixed-top-wrap');
+        });
+
+        function search(area) {
+            var keyword = $.trim($(area + ' .js-search-input').val());
+            var show = 'list';
+            var cityHtml = $.trim($('.hdx-feature-head-bottom-new .hdx-feature-head-bottom-new .city-select').find('p.city-info').html());
+            var city = cityHtml.substring(0, cityHtml.indexOf('<span'));
+
+            var url = 'https://bj.huodongxing.com/search';
+            url += '?ps=12&pi=0';
+            url += '&list=' + show;
+            if (keyword != null && keyword != '') url += '&qs=' + keyword;
+            if (city != null && city != '') url += '&city=' + city;
+            url += "&st=1,4"
+            window.location = url;
+        }
+
+        $('.hdx-feature-head-bottom-new .city-select').find('a').on('click', function () {
+            if ('全国北京上海广州深圳杭州武汉成都长沙'.indexOf($(this).html()) > -1)
+                $('.hdx-feature-head-bottom-new .city-select').find('p.city-info').html($(this).html() + '<span class="icon icon-down"></span>');
+        });
+
+        $(document).keyup(function (event) {
+            if (event.keyCode == 13) {
+                var keyword = $.trim($('.search-div-wrap .js-search-input').val());
+                var keywordfixed = $.trim($('.posi-fixed-top-wrap .js-search-input').val());
+                if ($('.hdx-feature-head-bottom-new').css('opacity') == '1') {
+                    if (keyword == null || keyword == '') return;
+                    $('.search-div-wrap .search-link').trigger('click');
+                } else {
+                    if (keywordfixed == null || keywordfixed == '') return;
+                    $('.posi-fixed-top-wrap .search-link').trigger('click');
+                }
+            }
+        });
+
+        $(window).scroll(function () {
+            var navwrap = $('.hdx-feature-nav-wrap').offset().top;
+            var navheight = $('.hdx-feature-nav-wrap').height();
+            var scrollTop = $(document).scrollTop();
+            if (navwrap + navheight <= scrollTop) {
+                $('.posi-fixed-top-wrap').css({
+                    'top': '0'
+                });
+                $('.hdx-feature-head').css('opacity', '0');
+                $('.hdx-feature-head-bottom-new').css('opacity', '0');
+                $('.hdx-feature-nav-wrap').css('opacity', '0');
+                $('.hdx-feature-head-bottom-new .js-search-input').val($('.posi-fixed-top-wrap .js-search-input').val());
+            } else {
+                $('.posi-fixed-top-wrap').css({
+                    'top': '-50px'
+                });
+                $('.hdx-feature-head').css('opacity', '1');
+                $('.hdx-feature-head-bottom-new').css('opacity', '1');
+                $('.hdx-feature-nav-wrap').css('opacity', '1');
+                $('.posi-fixed-top-wrap .js-search-input').val($('.hdx-feature-head-bottom-new .js-search-input').val());
+            }
+        });
+    </script>
+    <section class="right-position-advice-wrap js-sticky-position">
+        <div class="advice-div">
+            <div class="advice-div-show"><span class="icon-advice-new icon-new"></span></div>
+            <div class="advice-div-hover"><img class="advice-logo" src="https://cdn.huodongxing.com/Content/v2.0/img/new-hd-advice/kkkf.png"></div>
+        </div><a class="feedback-div" data-target="#home_feedback_layer" data-toggle="modal">
+            <div class="feedback-div-show"><span class="icon-feedback-new icon-new"></span></div>
+            <div class="feedback-div-hover">意见反馈</div></a>
+        <div class="top-div js-top-div">
+            <div class="top-div-show"><span class="icon-top-new icon-new"></span></div>
+            <div class="top-div-hover">回到顶部</div>
+        </div>
+    </section>
+
+
+
+
+    <section class="hdx-feature-content--wrap">
+        <section class="Nav-search">
+            <input type="hidden" id="eventsShowType" value=""/>
+            <div class="all-type auto-width">
+                <h3 class="list__title" style="margin-top: 0px;"></h3>
+                <div class="all-type-list">
+                    <div class="all-type-item flex">
+                        <span class="all-type-item-left">时段:</span>
+                        <div class="all-type-item-right"  id="filterByDate">
+                            <a class="all-not" data-value="">全部</a>
+                            <a data-value="t2">今天</a>
+                            <a data-value="t3">明天</a>
+                            <a data-value="t1">本周</a>
+                            <a data-value="t4">本周末</a>
+                            <a data-value="t5">本月</a>
+                            <input style="width:200px;" class="js-time-day" type="text" data-input value="" placeholder="指定日期" />
+                        </div>
+                    </div>
+                    <div class="all-type-item flex">
+                        <span class="all-type-item-left">频道:</span>
+                        <div class="all-type-item-right" id="filterByChannel">
+                            <a class="all-not" data-value="">全部</a>
+                            <a data-value="行业">行业</a>
+                            <a data-value="生活">生活</a>
+                            <a data-value="亲子">亲子</a>
+                            <a data-value="学习">学习</a>
+                        </div>
+                    </div>
+                    <div class="all-type-item flex">
+                        <span class="all-type-item-left">分类:</span>
+                        <div class="all-type-item-right" id="filterByTag">
+                            <a class="all-not" data-value="">全部</a>
+                            <a data-value="IT互联网">IT互联网</a>
+                            <a data-value="创业">创业</a>
+                            <a data-value="科技">科技</a>
+                            <a data-value="金融">金融</a>
+                            <a data-value="游戏">游戏</a>
+                            <a data-value="教育">教育</a>
+                            <a data-value="电商">电商</a>
+                            <a data-value="文娱">文娱</a>
+                            <a data-value="营销">营销</a>
+                            <a data-value="设计">设计</a>
+                            <a data-value="地产">地产</a>
+                            <a data-value="医疗">医疗</a>
+                            <a data-value="服务业">服务业</a>
+                            <a data-value="区块链">区块链</a>
+                            <a data-value="演出">演出</a>
+                            <a data-value="文艺">文艺</a>
+                            <a data-value="手工">手工</a>
+                            <a data-value="公益">公益</a>
+                            <a data-value="户外出游">户外出游</a>
+                            <a data-value="运动健康">运动健康</a>
+                            <a data-value="聚会交友">聚会交友</a>
+                            <a data-value="休闲娱乐">休闲娱乐</a>
+                            <a data-value="投资理财">投资理财</a>
+                            <a data-value="时尚">时尚</a>
+                            <a data-value="心理">心理</a>
+                            <a data-value="体育赛事">体育赛事</a>
+                            <a data-value="儿童才艺">儿童才艺</a>
+                            <a data-value="益智潮玩">益智潮玩</a>
+                            <a data-value="儿童剧/展览">儿童剧/展览</a>
+                            <a data-value="亲子旅游">亲子旅游</a>
+                            <a data-value="早教/升学">早教/升学</a>
+                            <a data-value="课程">课程</a>
+                            <a data-value="读书">读书</a>
+                            <a data-value="职场">职场</a>
+                            <a data-value="社团">社团</a>
+                            <a data-value="讲座">讲座</a>
+                            <div class="js-item-down-list"><span class="js-item-down"></span></div>
+                        </div>
+                    </div>
+                    <div class="all-type-item flex">
+                        <span class="all-type-item-left">城市:</span>
+                        <div class="all-type-item-right" id="filterByCity">
+                            <a class="all-not" data-value="全部">全部</a>
+                            <a data-value="北京">北京</a>
+                            <a data-value="上海">上海</a>
+                            <a data-value="广州">广州</a>
+                            <a data-value="深圳">深圳</a>
+                            <a data-value="杭州">杭州</a>
+
+                            <a data-value="成都">成都</a>
+                            <a data-value="南京">南京</a>
+                            <a data-value="苏州">苏州</a>
+                            <a data-value="武汉">武汉</a>
+                            <a data-value="天津">天津</a>
+
+                            <a data-value="重庆">重庆</a>
+                            <a data-value="西安">西安</a>
+                            <a data-value="厦门">厦门</a>
+                            <a data-value="宁波">宁波</a>
+                            <a data-value="郑州">郑州</a>
+
+                            <a data-value="青岛">青岛</a>
+                            <a data-value="东莞">东莞</a>
+                            <a data-value="佛山">佛山</a>
+                            <a data-value="长沙">长沙</a>
+                            <a data-value="石家庄">石家庄</a>
+                            <a data-value="昆明">昆明</a>
+                            <div class="js-item-down-list"><span class="js-item-down"></span></div>
+                        </div>
+                    </div>
+                    <div class="all-type-item flex"><span class="all-type-item-left">状态:</span>
+                        <div class="all-type-item-right" id="filterByStatus">
+                            <a class="all-not" data-value="">全部</a>
+                            <a data-value="1">报名中</a>
+                            <a data-value="4">已结束</a>
+                        </div>
+                        <div class="all-type-item-right-checkbox flex">
+                            <div class="checkfive">
+                                <input class="aabb" type="checkbox" id="chk_free" onchange="javascript:search2(1);" checked=checked />
+                                <label for="chk_free"></label>
+                            </div>
+                            <span class="checkfive-info">免费</span>
+                            <div class="checkfive">
+                                <input class="aabb" type="checkbox" id="chk_charge" onchange="javascript:search2(1);" checked=checked />
+                                <label for="chk_charge"></label>
+                            </div>
+                            <span class="checkfive-info">付费</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="type-activit-wrap auto-width">
+                <div class="search-type-activit-sort flex">
+                    <ul class="search-type-activit-sort-ul flex" id="orderby">
+                        <li><a data-value="o">综合排序</a></li>
+                        <li><a data-value="n">最新发布</a></li>
+                        <li><a data-value="v">热门点击</a></li>
+                        <li><a data-value="r">最多参与</a></li>
+                    </ul>
+                    <div class="switchover-pattern">
+                        <span class="list-pattern-icon icon" onclick="$.trim($('#eventsShowType').val('list'));search2(1);"></span>
+                        <span class="mesh-pattern-icon icon mesh-pattern-icon--active"></span>
+                    </div>
+                </div>
+
+                <div class="search-tab-content-list-check flex">
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4504668804100?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/4504668804100/833505751984208_v2small.jpg" alt="BigAI创新大学 + ABC SUMMIT 2019百度云智峰会" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月29日<span>09:30</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    BigAI创新大学 + ABC SUMMIT 2019百度云智峰会
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳天辰东路7号国家会议中心</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>百度</span></p><p>#<span>人工智能</span></p><p>#<span>北京活动</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>4480</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/5502775517214?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/5502775517214/563491514637095_v2small.jpg" alt="神州英才《战略人力资源与股权激励》高端课&#183;8月29日" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月29日<span>09:00</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    神州英才《战略人力资源与股权激励》高端课&#183;8月29日
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳保利大厦</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>人力资源</span></p><p>#<span>薪酬绩效</span></p><p>#<span>股权激励</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>2115</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/5505715661900?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/5505715661900/533513558936499_v2small.jpg" alt="周末 火山草原露营 陪你一起坐在火山脚下数星星" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月17日<span>07:30</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    周末 火山草原露营 陪你一起坐在火山脚下数星星
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳地铁10号线; 地铁5号线惠新西街南口</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>848</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/1503819141300?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/1503819141300/203498754309557_v2small.jpg" alt="2019新营销创造者大会" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月29日<span>09:00</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    2019新营销创造者大会
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳东北三环七圣中街12号云南大厦楼下北京新云南皇冠假日酒店</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>新营销</span></p><p>#<span>数据运营</span></p><p>#<span>品牌营销</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>2306</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4504800259600?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/4504800259600/993511554748658_v2small.jpg" alt="2019新零售解决方案高层研讨会暨新零售行业CIO论坛" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月29日<span>13:30</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    2019新零售解决方案高层研讨会暨新零售行业CIO论坛
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京海淀中关村大街15-11号创业公社中关村国际创客中心B1层机械骑士咖啡&#183;书店(中关村店)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>新零售</span></p><p>#<span>中台</span></p><p>#<span>CIO</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>5311</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3506521568900?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/3506521568900/653517511763427_v2small.jpg" alt="FreeTalk创投公开课：踏入“消费无人区”，有哪些生意值得投？" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月24日<span>13:30</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    FreeTalk创投公开课：踏入“消费无人区”，有哪些生意值得投？
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城金鱼胡同王府井东街8号(近新东安百货)澳门中心</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>创投</span></p><p>#<span>新消费</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>599</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/5503929082500?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/5503929082500/743499524625198_v2small.jpg" alt="12堂微信文案课，让你的微信成为印钞机" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月01日<span>12:00</span></p>
+                                <div class="item-title">
+                                    <img class="item-go-top item-go-top-good" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/youxuan.png" />
+                                    12堂微信文案课，让你的微信成为印钞机
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳线上活动 报名成功后请主动添加主办方微信：13241937740 职氧科技 银牌主办方</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>670</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+
+                        <a href="/event/7504102842400?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e5%88%97%e5%9b%be%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/7504102842400/493501659354152_v2small.jpg" alt="美术馆里的艺术课 | 独有美术馆环境，启蒙孩子艺术性思考与创作" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月07日<span>10:00</span></p>
+                                <div class="item-title flex">
+                                    <img class="item-go-top item-go-top-new" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/zuixin.png" />
+                                    美术馆里的艺术课 | 独有美术馆环境，启蒙孩子艺术性思考与创作
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳酒仙桥路4号798艺术区UCCA尤伦斯当代艺术中心二层UCCA Kids</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>幼儿才艺</span></p><p>#<span>儿童美术</span></p><p>#<span>艺术启蒙</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>8860</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+
+                        <a href="/event/4498877709300?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e5%88%97%e5%9b%be%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201906/4498877709300/533464796229555_v2small.jpg" alt="第九届（2019）IF &#183; 商业地产年会" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月27日<span>13:30</span></p>
+                                <div class="item-title flex">
+                                    <img class="item-go-top item-go-top-new" src="https://cdn.huodongxing.com/Content/v3.0/img/hdx/hdx-main-feature/admin-head/zuixin.png" />
+                                    第九届（2019）IF &#183; 商业地产年会
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳东三环中路7号北京千禧大酒店</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>商业地产</span></p><p>#<span>经济观察报</span></p><p>#<span>年会</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>5768</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/6503246077300?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/6503246077300/933494977247999_v2small.jpg" alt="她创力&#183;女性创业公益帮扶计划" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月24日<span>09:00</span></p>
+                                <div class="item-title">
+                                    她创力&#183;女性创业公益帮扶计划
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳百子湾路29号爱工场文化产业园2号楼(蜜荷部落)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>IT互联网</span></p><p>#<span>时尚</span></p><p>#<span>聚会交友</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>3496</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/2505361633912?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/2505361633912/333509466933181_v2small.jpg" alt="城市探险之王平煤矿探险摄影记（第三季）" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">09月07日<span>09:00</span></p>
+                                <div class="item-title">
+                                    城市探险之王平煤矿探险摄影记（第三季）
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京石景山地铁1号线苹果园</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>探险</span></p><p>#<span>聚会</span></p><p>#<span>摄影</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>441</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/1506415973112?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/1506415973112/803516778990266_v2small.jpg" alt="9.7日｜蹦趴狂欢夜｜工体VICS包场-电音蹦迪-酒水畅饮-荧光之夜-今夜无眠" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">09月07日<span>17:00</span></p>
+                                <div class="item-title">
+                                    9.7日｜蹦趴狂欢夜｜工体VICS包场-电音蹦迪-酒水畅饮-荧光之夜-今夜无眠
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳工人体育场北门内东侧(近澳拜克牛排店)VICS酒吧</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>267</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/2501601929900?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/2501601929900/863484338743790_v2small.jpg" alt="单身汪的幸福生活" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月24日<span>13:30</span></p>
+                                <div class="item-title">
+                                    单身汪的幸福生活
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳地铁6号线黄渠</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>聚会</span></p><p>#<span>交友</span></p><p>#<span>运动</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>2030</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/2505359681712?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/2505359681712/253509443469246_v2small.jpg" alt="临时情侣大作战之爱在深秋的故事" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月31日<span>13:30</span></p>
+                                <div class="item-title">
+                                    临时情侣大作战之爱在深秋的故事
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳酒仙桥路4号北京798艺术区-西南门</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>聚会</span></p><p>#<span>交友</span></p><p>#<span>户外</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>694</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/7506359930800?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/7506359930800/863516390388068_v2small.jpg" alt="八月Brunch活动 | 别急，你终将找到自己的生活、成就自己的事业" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月25日<span>14:00</span></p>
+                                <div class="item-title">
+                                    八月Brunch活动 | 别急，你终将找到自己的生活、成就自己的事业
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城崇文门外大街18号国瑞购物中心F1LinLin s Farm</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>励媖北京</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>1111</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4503531658400?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/4503531658400/323496748039341_v2small.jpg" alt="每周六日@狼人杀+唱歌+饮料+零食 35元畅玩一下午" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月03日<span>11:00</span></p>
+                                <div class="item-title">
+                                    每周六日@狼人杀+唱歌+饮料+零食 35元畅玩一下午
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京西城朝阳区建国门外大街甲6号中环世贸大厦B1层温莎KTV(国贸店)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>狼人杀</span></p><p>#<span>唱歌</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>1426</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3503530743800?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/3503530743800/603496743779283_v2small.jpg" alt="每周六@保龄球活动 打卡网红场馆 零基础秒会" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月03日<span>12:00</span></p>
+                                <div class="item-title">
+                                    每周六@保龄球活动 打卡网红场馆 零基础秒会
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京西城地铁14号线东段; 地铁15号线望京</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>保龄球</span></p><p>#<span>认识新朋友</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>928</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3503527931200?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/3503527931200/553496727352472_v2small.jpg" alt="每周日@私人影院+CP随机组队游戏 乐乎助你浪漫脱单" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月04日<span>14:30</span></p>
+                                <div class="item-title">
+                                    每周日@私人影院+CP随机组队游戏 乐乎助你浪漫脱单
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京西城海淀区西直门北大街32号枫蓝国际购物中心</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>相亲</span></p><p>#<span>交友</span></p><p>#<span>私人影院</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>1219</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4506501644400?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/4506501644400/163517372341608_v2small.jpg" alt="9.7周六：工体蹦迪趴，包场工体VICS，酒水畅饮，枕头大战，荧光之夜，DJ带你一起嗨！" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">09月07日<span>17:00</span></p>
+                                <div class="item-title">
+                                    9.7周六：工体蹦迪趴，包场工体VICS，酒水畅饮，枕头大战，荧光之夜，DJ带你一起嗨！
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳工人体育场北路辅路VICS酒吧-北门</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>工体蹦迪趴</span></p><p>#<span>VICS</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>153</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3503529097100?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/3503529097100/733496740339241_v2small.jpg" alt="每周日@羽毛球活动 总有一项运动让你爱不释手" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月04日<span>12:00</span></p>
+                                <div class="item-title">
+                                    每周日@羽毛球活动 总有一项运动让你爱不释手
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京西城朝阳区青年路</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>运动</span></p><p>#<span>羽毛球</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>725</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/2506273187900?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/2506273187900/133515786186718_v2small.jpg" alt="周六/日：顺义超人蹦床，粘粘墙，碰碰球大战，海绵池，魔鬼滑道，蜘蛛塔，（1日）" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月24日<span>17:00</span></p>
+                                <div class="item-title">
+                                    周六/日：顺义超人蹦床，粘粘墙，碰碰球大战，海绵池，魔鬼滑道，蜘蛛塔，（1日）
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京朝阳地铁10号线; 地铁5号线惠新西街南口</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>蹦床</span></p><p>#<span>网红粘粘墙</span></p><p>#<span>魔鬼滑道</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>83</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3506699598700?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/3506699598700/763518748219507_v2small.jpg" alt="9.22周日：秋季相亲趴，单身男/女联谊会，包场热带雨林，主持人+游戏互动，等你来脱单，" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">09月22日<span>14:00</span></p>
+                                <div class="item-title">
+                                    9.22周日：秋季相亲趴，单身男/女联谊会，包场热带雨林，主持人+游戏互动，等你来脱单，
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京丰台南三环玉泉营环岛京开高速铺路东侧热带雨林酒店</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>单身相亲趴</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>29</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/3506550748100?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/3506550748100/103517880919048_v2small.jpg" alt="9.7周六晚@89元特惠蹦迪夜 香槟卡座 酒水畅饮 89元畅玩三里屯豪华夜店" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">09月07日<span>17:00</span></p>
+                                <div class="item-title">
+                                    9.7周六晚@89元特惠蹦迪夜 香槟卡座 酒水畅饮 89元畅玩三里屯豪华夜店
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京西城三里屯</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>蹦迪</span></p><p>#<span>喝酒</span></p><p>#<span>夜店</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>74</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/5505237453700?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/5505237453700/353508595720404_v2small.jpg" alt="泊寓 胡同里 青春市集，青春不落幕，爱情不散场" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月24日<span>11:00</span></p>
+                                <div class="item-title">
+                                    泊寓 胡同里 青春市集，青春不落幕，爱情不散场
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城安定门街道千福巷12号泊寓(北锣店)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>泊寓</span></p><p>#<span>綠光市集</span></p><p>#<span>分享會</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>2762</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4503822048200?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201907/4503822048200/273517450962574_v2small.jpg" alt="Come out to Socialize! 老外社交圈！纯老外社交活动，结交各国朋友，练习口语" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月01日<span>09:00</span></p>
+                                <div class="item-title">
+                                    Come out to Socialize! 老外社交圈！纯老外社交活动，结交各国朋友，练习口语
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城南锣鼓巷20号1幢星巴克(南锣鼓巷店)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>老外</span></p><p>#<span>社交</span></p><p>#<span>学习</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>1021</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/1505670282100?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/1505670282100/773511598964278_v2small.jpg" alt="Language Exchange来一场语言交换！建立语言环境，提高口语" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月13日<span>15:00</span></p>
+                                <div class="item-title">
+                                    Language Exchange来一场语言交换！建立语言环境，提高口语
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城南锣鼓巷20号1幢星巴克(南锣鼓巷店)</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>381</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/5483375391100?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201903/5483375391100/943380615079878_v2small.jpg" alt="《北京线下相亲会专场》谈一场以结婚为目的恋爱， 精准匹配" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">07月31日<span>18:30</span></p>
+                                <div class="item-title">
+                                    《北京线下相亲会专场》谈一场以结婚为目的恋爱， 精准匹配
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京东城国贸SOHO6号楼建外SOHO 6号楼</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>2488</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-tab-content-item-mesh">
+                        <a href="/event/4504513874512?utm_source=%e5%8f%91%e7%8e%b0%e6%b4%bb%e5%8a%a8%e9%a1%b5&amp;utm_medium=&amp;utm_campaign=eventspage" target="_blank">
+                            <img class="item-logo" src="https://cdn.huodongxing.com/logo/201908/4504513874512/723503598521567_v2small.jpg" alt="【单身不单行】人大羽毛球：完美周末，一起度过（每周日）" />
+                            <div class="item-mesh-conter">
+                                <p class="date-pp">08月11日<span>18:00</span></p>
+                                <div class="item-title">
+                                    【单身不单行】人大羽毛球：完美周末，一起度过（每周日）
+                                </div>
+                                <div class="item-dress flex">
+                                    <span class="item-dress-icon icon"></span>
+                                    <p class="item-dress-pp">北京海淀人民大学北校区羽毛球馆</p>
+                                </div>
+                            </div>
+                            <div class="item-mesh-bottom flex">
+                                <div class="item-bottom-left flex">
+                                    <div class="tag-list flex">
+                                        <p>#<span>单身活动</span></p><p>#<span>聚会交友</span></p><p>#<span>周日约会</span></p>                                    </div>
+                                </div>
+                                <div class="item-bottom-right flex">
+                                    <div class="browse-div flex"><span class="icon browse-icon"></span>402</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <script src="https://cdn.huodongxing.com/Content/v3.0/dist/lib/layui/lay/modules/laypage.js" type="text/javascript"></script>
+                <div class="pagination" id="pagination"></div>
+                <script type="text/javascript">
+                    layui.use(['laypage', 'layer'], function(){
+                        var laypage = layui.laypage
+                            , layer = layui.layer;
+                        //自定义样式
+                        laypage.render({
+                            elem: 'pagination',
+                            count: 64,
+                            limit: 20,
+                            curr: 1,
+                            theme: '#4aca53',
+                            jump: function (obj, first) {
+                                if(!first) window.location =  updateQueryStringParameter(window.location.href, 'page', obj.curr);
+                            }
+                        });
+                    });
+
+                    function updateQueryStringParameter(uri, key, value) {
+                        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+                        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+                        if (uri.match(re))  return uri.replace(re, '$1' + key + "=" + value + '$2');
+                        else return uri + separator + key + "=" + value;
+                    }
+                </script>
+            </div>
+        </section>
+    </section>
+
+    <script type="text/javascript">
+        //
+        $('.js-item-down-list').on('click', function () {
+            $(this).parent('.all-type-item-right').toggleClass('item-down-list__active');
+        })
+        //
+        var flatpickrObj = null; //日期选择控件对象
+        $(function () {
+            var dateType = "";
+            var date = "";
+            var dateTo = "";
+            var channel = "";
+            var tag = "聚会交友";
+            var city = "北京";
+            var status = "1";
+            var auth = "";
+            var orderby = "o";
+
+            var filterDate = $("#filterByDate");
+            if (dateTo != null && dateTo != '') $('.js-time-day').addClass('js-time-day-active');
+            else filterDate.find("a[data-value='" + dateType + "']").addClass("type--active");
+            filterDate.find("a").attr("onclick", "javascript:search1(1, 'filterByDate', this);");
+
+            var filterChannel = $("#filterByChannel");
+            filterChannel.find("a[data-value='" + channel + "']").addClass("type--active");
+            filterChannel.find("a").attr("onclick", "javascript:search1(1, 'filterByChannel', this);");
+
+            if (tag != null && $("#filterByTag").find("a[data-value='" + tag + "']").length < 1) {
+                $('<a data-value="' + tag + '">' + tag + '</a>').appendTo($("#filterByTag"));
+            }
+
+            var filterTag = $("#filterByTag");
+            var activeTag = filterTag.find("a[data-value='" + tag + "']");
+            if (activeTag != null) activeTag.addClass("type--active");
+            if (tag != null && tag != "" && filterTag != null && filterTag.length > 0 && activeTag != null && activeTag.length > 0 && channel == "") {
+                var alltag = filterTag.find("a[data-value='']");
+                if (alltag != null && alltag.length > 0) {
+                    activeTag.remove();
+                    alltag.after(activeTag);
+                }
+            }
+            filterTag.find("a").attr("onclick", "javascript:search1(1, 'filterByTag', this);");
+
+            city = city == '' || city == null ? "全部" : city;
+            var filterCity = $("#filterByCity");
+            filterCity.find("a[data-value='" + city + "']").addClass("type--active");
+            filterCity.find("a").attr("onclick", "javascript:search1(1, 'filterByCity', this);");
+
+            var filterStatus = $("#filterByStatus");
+            filterStatus.find("a[data-value='" + status + "']").addClass("type--active");
+            filterStatus.find("a").attr("onclick", "javascript:search1(1, 'filterByStatus', this);");
+
+            var filterOrderby = $("#orderby");
+            filterOrderby.find("a[data-value='" + orderby + "']").addClass("active");
+            filterOrderby.find("a").attr("onclick", "javascript:$('#orderby').find('a').removeClass('active'); $(this).addClass('active');search2(1);");
+
+            Date.prototype.addDays = function (days) {
+                var date = new Date(this.valueOf());
+                date.setDate(date.getDate() + days);
+                return date;
+            }
+            Date.prototype.addHours = function (hours) {
+                var date = new Date(this.valueOf());
+                date.setHours(date.getHours() + hours);
+                return date;
+            }
+
+            flatpickrObj = $(".js-time-day").flatpickr({
+                "locale": "zh",
+                "dateFormat": "Y-m-d",
+                "mode": "range",
+                "defaultDate": [date, dateTo],
+                //            "onReady": function (selectedDates, dateStr, instance) {
+                //                if (dateTo != null && dateTo != "") {
+                //                    $('.js-time-day').val(date + ' to ' + dateTo);
+                //                    //instance.config.defaultDate = new Array(date, dateTo);  //这样赋值首次不起作用
+                //                }
+                //            },
+                "onChange": function (selectedDates, dateStr, instance) {
+                    $('.js-time-day').removeClass('js-time-day-active');
+                    if (selectedDates.length > 0) {
+                        if (selectedDates.length < 2) { //选择开始后 限制可选区域30天内
+                            instance.config.minDate = selectedDates[0];
+                            instance.config.maxDate = selectedDates[0].addDays(29);
+                        }
+                        else {
+                            $("#filterByDate").find("a").removeClass("type--active");
+                            $('.js-time-day').addClass('js-time-day-active');
+                            search2(1);
+                        }
+                    }
+                },
+                "onClose": function (selectedDates, dateStr, instance) {
+                    instance.config.minDate = '2010-01-01';  //重新恢复可选范围
+                    instance.config.maxDate = '2050-12-30';
+                }
+            });
+        });
+
+        function search1(page, filterId, ele) {
+            if ($(ele).hasClass('type--active')) return;
+            if (filterId != null && filterId != "" && ele != null) {
+                if (filterId == 'filterByChannel' && $(ele).attr('data-value') != '') {
+                    $("#filterByTag").find("a").removeClass("type--active");
+                    $("#filterByTag").find("a[data-value='']").addClass("type--active");
+                }
+                if (filterId == 'filterByDate' && $('.js-time-day').hasClass('js-time-day-active'))
+                    $('.js-time-day').removeClass('js-time-day-active');
+                var parentele = $(ele).parent();
+                if (parentele != null && parentele.length > 0 && parentele.is("div")) {
+                    $("#" + filterId).find("a").removeClass("type--active");
+                    $(ele).addClass("type--active");
+                }
+            }
+            search2(page);
+        }
+
+        function search2(page) {
+            var show = $.trim($("#eventsShowType").val());
+            var free = $("#chk_free").prop('checked') ? "1" : "";
+            var charge = $("#chk_charge").prop('checked') ? "2" : "";
+            var auth = $("#chk_auth").prop('checked') ? "1" : "";
+            var dateType = $.trim($("#filterByDate").find("a.type--active").attr("data-value"));
+            var channel = $.trim($("#filterByChannel").find("a.type--active").attr("data-value"));
+            var status = $.trim($("#filterByStatus").find("a.type--active").attr("data-value"));
+            var tag = $.trim($("#filterByTag").find("a.type--active").attr("data-value"));
+            var city = $.trim($("#filterByCity").find("a.type--active").attr("data-value"));
+            var orderby = $.trim($("#orderby").find("a.active").attr("data-value"));
+
+            var url = '/events?';
+            if (show != null && show != "" && show == 'list')
+                url = '/eventlist?'
+            url += 'orderby=' + orderby;
+            var range = '';
+            if ((free + charge).length == 1) range = free + charge;
+            if (range != null && range != "") url += '&range=' + range;
+            if (auth != null && auth != "") url += '&auth=' + auth;
+            if (dateType != null && dateType != "") url += '&d=' + dateType;
+            if ($('.js-time-day').hasClass('js-time-day-active') && flatpickrObj.selectedDates.length >=2 ) url += '&d=ts&date=' + flatpickrObj.selectedDates[0].addHours(8).toISOString().slice(0, 10) + '&dateTo=' + flatpickrObj.selectedDates[1].addHours(8).toISOString().slice(0, 10);
+            if (channel != null && channel != "") url += '&channel=' + encodeURIComponent(channel);
+            if (status != null && status != "") url += '&status=' + status;
+            if (tag != null && tag != "") url += '&tag=' + encodeURIComponent(tag);
+            if (city != null && city != "") url += '&city=' + encodeURIComponent(city);
+
+            if (page > 1) url += '&page=' + page;
+
+            window.location = url;
+        }
+    </script>
+</section>
+<footer>
+    <div class="footer-content auto-width">
+        <div class="footer-content-top flex">
+            <div class="footer-content-right flex">
+                <div class="footer-content-right-item">
+                    <dl>
+                        <dt>活动行</dt>
+                        <dd><a href="https://www.huodongxing.com/about?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">关于我们</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/app?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">下载手机版</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/guanjia?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">活动行管家(主办方版)</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/bbx?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">活动行百宝箱</a></dd>
+                        <dd><a href="http://venue.huodongxing.com/venue?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">活动场地入驻</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-content-right-item">
+                    <dl>
+                        <dt>我要办活动</dt>
+                        <dd><a href="https://bj.huodongxing.com/intro" target="_blank">办活动前必读</a></dd>
+                        <dd><a href="https://www.huodongxing.com/console/eventadmin?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">发布/管理活动</a></dd>
+                        <dd class="vip-admin"><a href="https://www.huodongxing.com/vip?utm_source=footer&utm_medium=&utm_campaign=footpage" target="_blank">成为VIP主办方</a></dd>
+                        <dd><a  href="https://bj.huodongxing.com/intro#intro-3" target="_blank">售票/推广活动</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/logodownload" target="_blank">活动行Logo下载</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-content-right-item">
+                    <dl>
+                        <dt>高级服务</dt>
+                        <dd><a href="https://bj.huodongxing.com/mice" style="color: #f85050;font-weight: 600;">大会解决方案</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/conference#navbarjs4">签到验票服务</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/conference#navbarjs6">定制活动官网</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/conference#navbarjs4">定制大会APP/小程序</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/conference#navbarjs4">定制胸卡/邀请函</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-content-right-item" style="width:auto">
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd><a>客服电话</a></dd>
+                        <dd class="advice-dd"><a>010-86395931</a></dd>
+                        <dd><a>周一到周日（09:00-21:00）</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/intro#intro-3" target="_blank">商务合作</a></dd>
+                        <dd><a href="https://bj.huodongxing.com/intro#intro-3" target="_blank">新媒体推广</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content-bottom">
+            <div style="float:left">
+                <a id="_pingansec_bottomimagelarge_shiming" style="padding:0 3px;" href="http://si.trustutn.org/info?sn=731180911036672630167&amp;certType=1" target="_blank"><img width="" src="http://v.trustutn.org/images/cert/bottom_large_img.png"></a>
+            </div>
+            <div>
+                <div class="footer-city flex"><span class="city-name">热门城市：</span>
+                    <ul class="footer-city-list flex">
+                        <li><a href="https://bj.huodongxing.com/events?city=北京" target="_blank">北京站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=上海" target="_blank">上海站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=广州" target="_blank">广州站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=深圳" target="_blank">深圳站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=杭州" target="_blank">杭州站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=成都" target="_blank">成都站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=南京" target="_blank">南京站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=苏州" target="_blank">苏州站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=重庆" target="_blank">重庆站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=武汉" target="_blank">武汉站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=厦门" target="_blank">厦门站</a><span class="line-right"></span></li>
+                        <li><a href="https://bj.huodongxing.com/events?city=西安" target="_blank">西安站</a></li>
+                    </ul>
+                </div>
+                <div class="footer-person flex"><span class="city-name">友情链接：</span>
+                    <ul class="footer-city-list flex">
+                        <li><a href="https://36kr.com/" target="_blank">36氪</a></li>
+                        <li><a href="https://www.cyzone.cn/" target="_blank">创业邦</a></li>
+                        <li><a href="https://www.newrank.cn/" target="_blank">新榜</a></li>
+                        <li><a href="http://www.chinajoy.net/" target="_blank">ChinaJoy</a></li>
+                        <li><a href="https://xmt.cn/index/" target="_blank">新媒体管家</a></li>
+                        <li><a href="https://www.ui.cn/" target="_blank">UI中国</a></li>
+                        <li><a href="https://www.designup.cn/" target="_blank">Designup</a></li>
+                        <li><a href="https://itjuzi.com/" target="_blank">IT桔子</a></li>
+                        <li><a href="https://neo.org/" target="_blank">NEO</a></li>
+                        <li><a href="http://yunxin.163.com/" target="_blank">网易云信</a></li>
+                        <li><a href="http://www.soft6.com/" target="_blank">中国软件网</a></li>
+                        <li><a href="http://www.im2maker.com" target="_blank">镁客网</a></li>
+                        <li><a href="https://www.rrxiu.net/" target="_blank">h5页面</a></li>
+                        <li><a href="http://www.iresearch.cn/" target="_blank">艾瑞网</a></li>
+                        <li><a href="http://www.135editor.com/" target="_blank">135编辑器</a></li>
+                        <li><a href="https://www.chuangkit.com/" target="_blank">创客贴图片制作</a></li>
+                        <li><a href="https://www.rabbitpre.com/" target="_blank">兔展</a></li>
+                        <li><a href="https://www.qiniu.com/" target="_blank">七牛云</a></li>
+                        <li><a href="http://www.tikersport.com/" target="_blank">垂马体育</a></li>
+                        <li><a href="https://www.laihua.com/" target="_blank">来画视频</a></li>
+                        <li><a href="http://maka.im/" target="_blank">MAKA在线设计</a></li>
+                        <li><a href="https://www.zaojiu.com" target="_blank">造就</a></li>
+                        <li><a href="https://modao.cc/?utm_source=huodongxing" target="_blank">墨刀原型设计</a></li>
+                        <li><a href="https://www.gaoding.com" target="_blank">稿定设计</a></li>
+                        <li><a href="https://www.iyiou.com" target="_blank">亿欧</a></li>
+                        <li><a href="http://biz.tom.com/" target="_blank">TOM商业</a></li>
+                        <li><a href="http://www.gllue.com/ " target="_blank">招聘系统</a></li>
+                        <li><a href="http://www.iterduo.com/" target="_blank">耳朵财经</a></li>
+                    </ul><a class="foot_div_more js_foot_div_more" target="_blank">更多<span class="more_icon_new icon"></span></a>
+                </div>
+                <p class="flex copyright">版权所有：北京艾科创意信息技术有限公司<span class="line-border"></span>ICP证京B2-20180942<span class="line-border"></span>京ICP备12026130号-2<span class="line-border"></span>京公网安备11010802017565</p>
+                <p>活动行 v5.6.2 © huodongxing.com All Rights Reserved.</p>
+            </div></div>
+    </div>
+</footer>
+<div class="feedback-layer modal fade" id="home_feedback_layer">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">让批评和口水来的更猛烈些吧！</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="feedback-face"></div>
+                <form action="">
+                    <input class="form-control" type="text" placeholder="请输入您的邮箱/手机号" id="home_suggest_contact" max-length="64" value=""/>
+                    <textarea placeholder="在这里写下您想说的话。" id="home_suggest_content" max-length="512"></textarea>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-link" data-dismiss="modal">取消</button><button type="button" class="btn btn-primary btn-lg" onclick="javascript:submitMySuggestion();">发送</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pop_message_dlg">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="pop_msg_head"><span class="icon-danger" id="pop_message_icon"></span><span id="pop_message_content"></span></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.huodongxing.com/Content/v2.0/plugin/flatpickr/v2.4.8/flatpickr.min.js"></script>
+<script src="https://cdn.huodongxing.com/Content/v2.0/plugin/flatpickr/v2.4.8/l10n/zh.js"></script>
+
+
+
+<script type="text/javascript">
+    var remote_ip_info = {"country":"中国","province":"北京","city":"北京","desc":"北京市朝阳区/联通"};
+    function setupScriptDelay(scriptPath, sync, onHead) {
+        var setupScript = document.createElement("script"); setupScript.type = 'text/javascript';
+        if (!sync) setupScript.async = true;
+        if (scriptPath.indexOf("http") == 0) setupScript.src = scriptPath;
+        else setupScript.src = (("https:" == document.location.protocol) ? "https://" : "http://") + scriptPath;
+        if (onHead) document.getElementsByTagName("head")[0].appendChild(setupScript);
+        else document.body.appendChild(setupScript);
+    }
+
+    function setupGlobalScript() {
+        setupScriptDelay("https://hm.baidu.com/h.js?d89d7d47b4b1b8ff993b37eafb0b49bd", true, true);
+        google_analytics_script();
+    }
+
+    $(function () {
+        window.setTimeout("setupGlobalScript()", 1200);
+
+        $(window).scroll(function () {
+            var adminwarpheight = $("body").height();
+            var windowHeight = $(window).height();
+            var scrollTop = $(document).scrollTop();
+            var adminwarpfoot = $("footer").height();
+            if (scrollTop + windowHeight + adminwarpfoot >= adminwarpheight) {
+                $(".js-sticky-position").css({
+                    'position': 'absolute',
+                    'bottom': 30
+//		                    'bottom': adminwarpfoot + 70
+                });
+            } else {
+                $(".js-sticky-position").css({
+                    'position': 'fixed',
+                    'bottom': 30
+                });
+            }
+        });
+
+        //回到顶部
+        $(".js-top-div").on("click", function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+
+        //友情链接更多按钮
+        $('.js_foot_div_more').on('click',function(){
+            $('.footer-person .footer-city-list').css('height','auto');
+
+            setTimeout(function(){
+                $('.js_foot_div_more').attr('href','https://www.huodongxing.com/friendlink');
+            },500);
+        })
+
+        if (typeof (remote_ip_info) != "undefined" && remote_ip_info != null) {
+            var currentCityHtml = "<a ";
+            var cityText = remote_ip_info.city == ''?'无法定位城市':remote_ip_info.city;
+            if (remote_ip_info.city == "北京") currentCityHtml += " href='https://bj.huodongxing.com'";
+            else if (remote_ip_info.city == "上海") currentCityHtml += " href='https://sh.huodongxing.com'";
+            else if (remote_ip_info.city == "广州") currentCityHtml += " href='https://gz.huodongxing.com'";
+            else if (remote_ip_info.city == "深圳") currentCityHtml += " href='https://sz.huodongxing.com'";
+            else if (remote_ip_info.city == "杭州") currentCityHtml += " href='https://hz.huodongxing.com'";
+            else if (remote_ip_info.city == "武汉") currentCityHtml += " href='https://wh.huodongxing.com'";
+            else if (remote_ip_info.city == "成都") currentCityHtml += " href='https://cd.huodongxing.com'";
+            else if (remote_ip_info.city == "长沙") currentCityHtml += " href='https://cs.huodongxing.com'";
+            else currentCityHtml += " href='https://www.huodongxing.com/events?city=" + (cityText=='无法定位城市'?'':cityText) + "'";
+
+            currentCityHtml += ">" + cityText + "</a>";
+            $('.city-present-item .city-present').html(currentCityHtml);
+
+            $("input[type=hidden][name='ex_country']").val(remote_ip_info.country);
+            $("input[type=hidden][name='ex_province']").val(remote_ip_info.province);
+            $("input[type=hidden][name='ex_city']").val(remote_ip_info.city);
+
+            if ($("input[type=hidden][name='City']") != null && $("input[type=hidden][name='City']").val() == "") {
+                $("input[type=hidden][name='City']").val(remote_ip_info.city);
+                $("input[type=hidden][name='Province']").val(remote_ip_info.province);
+                $("input[type=hidden][name='Address']").val(remote_ip_info.province + "--" + remote_ip_info.city);
+            }
+
+            $("input[type=hidden][name='country']").val(remote_ip_info.country);
+            $("input[type=hidden][name='province']").val(remote_ip_info.province);
+            $("input[type=hidden][name='city']").val(remote_ip_info.city);
+            $("input[type=hidden][name='district']").val(remote_ip_info.district);
+            var currentRegion = null;
+            if (document.cookie.length > 0) {
+                var regionstart = document.cookie.indexOf("HDX_REGION=");
+                if (regionstart != -1) {
+                    regionstart = regionstart + "HDX_REGION".length + 1;
+                    var regionend = document.cookie.indexOf(";", regionstart);
+                    if (regionend == -1) regionend = document.cookie.length;
+                    currentRegion = document.cookie.substring(regionstart, regionend);
+                }
+            }
+            if ((currentRegion == null || $.trim(currentRegion) == "") && remote_ip_info.city != null && $.trim(remote_ip_info.city) != "") {
+                var regionExDate = new Date();
+                regionExDate.setDate(regionExDate.getDate() + 365);
+                document.cookie = "HDX_REGION=" + escape(remote_ip_info.province + "," + remote_ip_info.city) + ";domain=huodongxing.com;path=/;expires=" + regionExDate.toGMTString();
+            }
+        }
+        else{
+            currentCityHtml = "<a href='https://www.huodongxing.com/events'>无法定位城市</a>";
+            $('.city-present-item .city-present').html(currentCityHtml);
+        }
+    });
+
+    function submitMySuggestion() {
+        var sContactVal = $("#home_suggest_contact").val();
+        var sContentVal = $("#home_suggest_content").val();
+        if (sContactVal == '' || sContentVal == '') return;
+        $.ajax({
+            url: '/suggest',
+            type: "POST",
+            data: { "contact": sContactVal, "content": sContentVal, "token":"12720A8A9367A2A8FAFE534C01266447F3ADE57796104322ABFB3FD88C347CA32B13AC6D18165B9CE8" },
+            success: function (data) {
+                window.alert("我们已收到您反馈的意见，感谢对我们的支持。");
+                $("#home_feedback_layer").modal("hide");
+            }
+        });
+    }
+    function PopupMessage(type, msg, hideTime,backdrop){
+        if(msg == null || msg == "" || type < 0) return;
+        if(type == 0){
+            type = 'icon-success'
+        }else if(type == 'warning'){
+            type = 'icon-warning'
+        }else{
+            type = 'icon-danger'
+        }
+        $("#pop_message_icon").removeClass("icon-danger icon-success icon-warning").addClass(type);
+        $("#pop_message_content").html(msg);
+        if(msg != null && msg.length <= 25){ $("#pop_msg_head").css("text-align","center"); }
+        else{ $("#pop_msg_head").css("text-align","center"); }
+
+        window.setTimeout(function () { $('#pop_message_dlg').modal({show:true,backdrop:'static'}); }, 350);
+        if(hideTime != null && hideTime > 0) window.setTimeout(function () { $('#pop_message_dlg').modal('hide'); }, hideTime);
+    }
+</script>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+    _atrk_opts = { atrk_acct: "GgKTe1aoiI00WL", domain: "huodongxing.com", dynamic: true };
+    function alexa_script() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); }
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=GgKTe1aoiI00WL" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+<input type="hidden" value="web02"/>
+</body>
+</html>
